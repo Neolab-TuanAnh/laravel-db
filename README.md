@@ -45,5 +45,5 @@ import trans from 'lang';
 const text = trans('validation.boolean', { attribute: 'User' });
 
 // Laravel lang: The :attribute field must be true or false.
-// JS Ouput: The User field must be true or false.
+// Ouput: The User field must be true or false.
 ```
