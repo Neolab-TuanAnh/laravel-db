@@ -11,3 +11,38 @@
 
 # php artisan langdb:generate
 ```
+
+You can optionally create a webpack alias to make importing translation helper function:
+
+```js
+// webpack.mix.js
+
+// Mix v6
+const path = require('path');
+
+mix.alias({
+    ziggy: path.resolve('resources/js/lang.js'),
+});
+
+// Mix v5
+const path = require('path');
+
+mix.webpackConfig({
+    resolve: {
+        alias: {
+            ziggy: path.resolve('resources/js/lang.js'),
+        },
+    },
+});
+```
+
+## Basic Usage
+
+```js
+// app.js
+import trans from 'lang';
+const text = trans('validation.boolean', { attribute: 'User' });
+
+// Laravel lang: The :attribute field must be true or false.
+// JS Ouput: The User field must be true or false.
+```
