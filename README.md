@@ -12,6 +12,7 @@
 # php artisan langdb:generate
 ```
 
+## Installation
 You can optionally create a webpack alias to make importing translation helper function:
 
 ```js
