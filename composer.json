@@ -1,0 +1,32 @@
+{
+  "name": "pandadev/lang-db",
+  "description": "This packpage store lang translation to database",
+  "authors": [
+    {
+      "name": "Tuan Anh",
+      "email": "tuananhcntt96@gmail.com"
+    }
+  ],
+  "type": "package",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "laravel/helpers": "^1.5",
+    "astrotomic/laravel-translatable": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+        "PandaDev\\LangDb\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PandaDev\\LangDb\\Providers\\LangDbServiceProvider"
+      ],
+      "aliases": {
+        "LangDb": "PandaDev\\LangDb\\Facades\\LangDb"
+      }
+    }
+  }
+}
