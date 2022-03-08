@@ -22,7 +22,7 @@ You can optionally create a webpack alias to make importing translation helper f
 const path = require('path');
 
 mix.alias({
-    ziggy: path.resolve('resources/js/lang.js'),
+    lang: path.resolve('resources/js/lang.js'),
 });
 
 // Mix v5
@@ -31,7 +31,7 @@ const path = require('path');
 mix.webpackConfig({
     resolve: {
         alias: {
-            ziggy: path.resolve('resources/js/lang.js'),
+            lang: path.resolve('resources/js/lang.js'),
         },
     },
 });
