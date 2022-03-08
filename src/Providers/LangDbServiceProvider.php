@@ -67,10 +67,6 @@ class LangDbServiceProvider extends TranslationServiceProvider
     public function register()
     {
         parent::register();
-        // The translation loader must be registered first.
-        // $this->registerLoader();
-        // $this->registerTranslator();
-
         // merge config
         $this->mergeConfigFrom($this->srcPath('config/lang-db.php'), 'lang-db');
     }
