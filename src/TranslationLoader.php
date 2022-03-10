@@ -4,7 +4,7 @@ namespace PandaDev\LangDb;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Translation\FileLoader;
-use PandaDev\LangDb\Translation;
+use PandaDev\LangDb\Models\Translation;
 
 class TranslationLoader extends FileLoader
 {
