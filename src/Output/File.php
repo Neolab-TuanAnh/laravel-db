@@ -26,10 +26,17 @@ class File implements Stringable
           }
         }
 
-        export {
-          setLangLocale
-        }
-        
+        /**
+         * Vue plugin
+         */
+        const LangVue = {
+          install: (v) => v.mixin({
+              methods: {
+                trans: (key, options = {}) => trans(key, options),
+              },
+          }),
+        };
+
         /**
         * Trans text with key
         * 
@@ -37,7 +44,7 @@ class File implements Stringable
         * @param {Object} options
         * @return {String}
         */
-        export default function trans(key, options = {}){
+        function trans(key, options = {}){
           if(!key || !TRANS.hasOwnProperty(key)) return null;
 
           const locate = window.langLocate || "{$defaultLocate}";
@@ -54,6 +61,12 @@ class File implements Stringable
 
           return lang;
         }
+
+        export {
+          setLangLocale,
+          LangVue
+        }
+        export default trans;
         JAVASCRIPT;
     }
 }
